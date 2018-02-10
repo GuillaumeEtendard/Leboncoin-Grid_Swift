@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYs-EM-wXZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="YKq-kY-qbC">
+            <objects>
+                <tableViewController id="Yc0-V4-xcu" customClass="TableViewController" customModule="Leboncoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cw8-Bj-eDN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="120" id="nWO-Me-Kkt" customClass="ItemCell" customModule="Leboncoin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nWO-Me-Kkt" id="mWv-kn-rhB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="IYM-Y1-wAp" kind="show" identifier="ShowProduct" id="9O4-js-Ilh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yc0-V4-xcu" id="hB5-2T-Lst"/>
+                            <outlet property="delegate" destination="Yc0-V4-xcu" id="Yl2-91-uvN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="0FS-BY-2Yh"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebC-iy-Y3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280.8" y="-18.440779610194905"/>
+        </scene>
+        <!--Single Product Controller-->
+        <scene sceneID="22y-f5-Q5f">
+            <objects>
+                <viewController id="IYM-Y1-wAp" customClass="SingleProductController" customModule="Leboncoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u0T-xv-IG6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8Q-PC-8Dm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LYN-7S-6lW" firstAttribute="bottom" secondItem="V8Q-PC-8Dm" secondAttribute="bottom" id="2Nz-Eb-LCr"/>
+                            <constraint firstItem="V8Q-PC-8Dm" firstAttribute="top" secondItem="LYN-7S-6lW" secondAttribute="top" id="3mE-Hr-QdZ"/>
+                            <constraint firstItem="V8Q-PC-8Dm" firstAttribute="leading" secondItem="LYN-7S-6lW" secondAttribute="leading" id="cNn-2S-vX1"/>
+                            <constraint firstItem="LYN-7S-6lW" firstAttribute="trailing" secondItem="V8Q-PC-8Dm" secondAttribute="trailing" id="d5E-ff-aOQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LYN-7S-6lW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pfT-CM-dap"/>
+                    <connections>
+                        <outlet property="scrollView" destination="V8Q-PC-8Dm" id="ISu-3k-V6h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5CL-sF-HM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2612" y="-18"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="07d-lw-xhZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BYs-EM-wXZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rpd-vW-lYk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.98039215686274506" green="0.59607843137254901" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yc0-V4-xcu" kind="relationship" relationship="rootViewController" id="qpY-6S-BaS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EiW-kV-cMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346" y="-18"/>
+        </scene>
+    </scenes>
+</document>
