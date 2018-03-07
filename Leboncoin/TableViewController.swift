@@ -11,8 +11,8 @@ import UIKit
 class TableViewController: UITableViewController {
     
     var products: [Product] = [
-        Product(id: 1, name: "Product 1", price: 20, type: "Abc", address: "75001 Paris", date: "2018-01-02", image: "https://photofiles.alphacoders.com/280/28078.jpg", description: "Maison traditionnelle individuelle à rénover, beau potentiel. Elle offre en rez de chaussée une entrée, un salon, un séjour, une cuisine, deux chambres, une salle de bains, un WC. A l'étage : une chambre, un palier, un WC et 2 greniers pour y faire 2 chambres supplementaires. Le tout élevé sur sous sol total. Erigé sur 686 m2 de terrain."),
-        Product(id: 2, name: "Product 2", price: 20, type: "Abc", address: "75001 Paris", date: "2018-01-02", image: "https://photofiles.alphacoders.com/280/28078.jpg", description: "Je vend ce jogging de football Nike PSG strike (Produit authentique, Taille S) car il me serre un peu et je ne peux pas le rembourser car je l,ai acheté soldé. Je l,ai acheté à 90Euro(s) euro au lieu de 100Euro(s) à la boutique du PSG à Bercy.(C,est un jogging aeroswift, fait exprès pour jouer au foot, il a une matière très élastique). Ce jogging est neuf [9,5/10]."),
+        Product(id: 1, name: "Maison traditionnelle", price: 200000, type: "Immobilier", address: "93200 Saint-Denis", date: "2009-10-12", image: "https://www.pajota.be/files/panden/property/photo/maison-a-vendre-a-affligem-30856.jpg", description: "Maison traditionnelle individuelle à rénover, beau potentiel. Elle offre en rez de chaussée une entrée, un salon, un séjour, une cuisine, deux chambres, une salle de bains, un WC. A l'étage : une chambre, un palier, un WC et 2 greniers pour y faire 2 chambres supplementaires. Le tout élevé sur sous sol total. Erigé sur 686 m2 de terrain."),
+        Product(id: 2, name: "Gel WC", price: 20, type: "Maison", address: "55500 Orléans", date: "2018-01-02", image: "https://statics.monoprix.fr/course/m_178865_gel-wc-avec-javel.jpg?t=20170909032533", description: "Je vend ce Gel VC avec Javel"),
         Product(id: 3, name: "Product 3", price: 20, type: "Abc", address: "Paris", date: "2018-01-02", image: "https://photofiles.alphacoders.com/280/28078.jpg",  description: "Je vend ce jogging de football Nike PSG strike (Produit authentique, Taille S) car il me serre un peu et je ne peux pas le rembourser car je l,ai acheté soldé. Je l,ai acheté à 90Euro(s) euro au lieu de 100Euro(s) à la boutique du PSG à Bercy.(C,est un jogging aeroswift, fait exprès pour jouer au foot, il a une matière très élastique). Ce jogging est neuf [9,5/10]."),
         Product(id: 4, name: "Product 4", price: 20, type: "Abc", address: "Paris", date: "2018-01-02", image: "https://photofiles.alphacoders.com/280/28078.jpg", description: "Je vend ce jogging de football Nike PSG strike (Produit authentique, Taille S) car il me serre un peu et je ne peux pas le rembourser car je l,ai acheté soldé. Je l,ai acheté à 90Euro(s) euro au lieu de 100Euro(s) à la boutique du PSG à Bercy.(C,est un jogging aeroswift, fait exprès pour jouer au foot, il a une matière très élastique). Ce jogging est neuf [9,5/10]."),
         Product(id: 5, name: "Product 5", price: 20, type: "Abc", address: "Paris", date: "2018-01-02", image: "https://photofiles.alphacoders.com/280/28078.jpg", description: "Je vend ce jogging de football Nike PSG strike (Produit authentique, Taille S) car il me serre un peu et je ne peux pas le rembourser car je l,ai acheté soldé. Je l,ai acheté à 90Euro(s) euro au lieu de 100Euro(s) à la boutique du PSG à Bercy.(C,est un jogging aeroswift, fait exprès pour jouer au foot, il a une matière très élastique). Ce jogging est neuf [9,5/10]."),
@@ -44,7 +44,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("section: \(indexPath.section)")
         print("row: \(indexPath.row)")
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,7 +66,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 130
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -44,7 +44,7 @@ class ItemCell: UITableViewCell{
         date.font = date.font.withSize(12)
         date.lineBreakMode = .byWordWrapping
         
-        self.contentView.grid = Grid(width: 12, height: 12)
+        self.contentView.grid = Grid(width: 100, height: 14)
         
         
         let leftView = UIView()
@@ -54,17 +54,17 @@ class ItemCell: UITableViewCell{
             let resource = ImageResource(downloadURL: url!)
             imageView.kf.setImage(with: resource)
 
-        self.contentView.addSubviewGrid(UIView: leftView, grid: ["x" : 0, "y": 0, "width": 4, "height": 12])
+        self.contentView.addSubviewGrid(UIView: leftView, grid: ["x" : 3, "y": 0, "width": 33, "height": 12])
         leftView.addSubviewGrid(UIView: imageView, grid: ["x" : 0, "y": 0, "width": 12, "height": 12])
         
         let rightView = UIView()
-        self.contentView.addSubviewGrid(UIView: rightView, grid: ["x" : 4, "y": 0, "width": 8, "height": 12])
+        self.contentView.addSubviewGrid(UIView: rightView, grid: ["x" : 39, "y": 0, "width": 61, "height": 12])
         
-        rightView.addSubviewGrid(UIView: title, grid: ["x" : 0, "y": 0, "width": 8, "height": 4])
-        rightView.addSubviewGrid(UIView: price, grid: ["x" : 0, "y": 4, "width": 8, "height": 2])
-        rightView.addSubviewGrid(UIView: type, grid: ["x" : 0, "y": 6, "width": 8, "height": 2])
-        rightView.addSubviewGrid(UIView: address, grid: ["x" : 0, "y": 8, "width": 8, "height": 2])
-        rightView.addSubviewGrid(UIView: date, grid: ["x" : 0, "y": 10, "width": 8, "height": 2])
+        rightView.addSubviewGrid(UIView: title, grid: ["x" : 0, "y": 0, "width": 100, "height": 4])
+        rightView.addSubviewGrid(UIView: price, grid: ["x" : 0, "y": 4, "width": 100, "height": 2])
+        rightView.addSubviewGrid(UIView: type, grid: ["x" : 0, "y": 6, "width": 100, "height": 2])
+        rightView.addSubviewGrid(UIView: address, grid: ["x" : 0, "y": 8, "width": 100, "height": 2])
+        rightView.addSubviewGrid(UIView: date, grid: ["x" : 0, "y": 10, "width": 100, "height": 2])
         }
     
 }
