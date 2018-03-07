@@ -47,7 +47,6 @@ extension UIView{
         UIView.frame = CGRect(x: (self.frame.maxX / (self.grid?.width)!) * x, y: (self.frame.maxY / (self.grid?.height)!) * y, width: (self.frame.width / (self.grid?.width)!) * width, height: (self.frame.height / (self.grid?.height)!) * height)
         
         self.addSubview(UIView)
-        print("subview added")
     }
 }
 

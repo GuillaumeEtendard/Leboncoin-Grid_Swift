@@ -54,7 +54,7 @@ class ItemCell: UITableViewCell{
             let resource = ImageResource(downloadURL: url!)
             imageView.kf.setImage(with: resource)
 
-        self.contentView.addSubviewGrid(UIView: leftView, grid: ["x" : 3, "y": 0, "width": 33, "height": 12])
+        self.contentView.addSubviewGrid(UIView: leftView, grid: ["x" : 3, "y": 1, "width": 33, "height": 12])
         leftView.addSubviewGrid(UIView: imageView, grid: ["x" : 0, "y": 0, "width": 12, "height": 12])
         
         let rightView = UIView()
@@ -65,6 +65,5 @@ class ItemCell: UITableViewCell{
         rightView.addSubviewGrid(UIView: type, grid: ["x" : 0, "y": 6, "width": 100, "height": 2])
         rightView.addSubviewGrid(UIView: address, grid: ["x" : 0, "y": 8, "width": 100, "height": 2])
         rightView.addSubviewGrid(UIView: date, grid: ["x" : 0, "y": 10, "width": 100, "height": 2])
-        }
-    
+    }
 }

@@ -21,12 +21,10 @@ class SingleProductController: UIViewController, UIScrollViewDelegate{
         
         self.scrollView.delegate = self
         self.scrollView.isScrollEnabled = true
-        self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 1024)
+        self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         self.scrollView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         if let singleProduct = self.product {
-            print("if let")
-            
             let title = UILabel()
             title.frame = CGRect()
             title.text = singleProduct.name
@@ -97,9 +95,8 @@ class SingleProductController: UIViewController, UIScrollViewDelegate{
             
             
             self.scrollView.grid = Grid(width: 12, height: 100)
-
             
-            self.scrollView.addSubviewGrid(UIView: imageView, grid: ["x" : 1, "y": 0, "width": 10, "height": 30])
+            self.scrollView.addSubviewGrid(UIView: imageView, grid: ["x" : 1, "y": 1, "width": 10, "height": 29])
             
             self.scrollView.addSubviewGrid(UIView: title, grid: ["x" : 1, "y": 30, "width": 10, "height": 5])
             
