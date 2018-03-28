@@ -46,7 +46,6 @@ class ItemCell: UITableViewCell{
         
         self.contentView.grid = Grid(width: 100, height: 14)
         
-        
         let leftView = UIView()
         
         let imageView = UIImageView()

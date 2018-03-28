@@ -17,14 +17,14 @@ class SingleProductController: UIViewController, UIScrollViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("view loaded")
-        
         self.scrollView.delegate = self
         self.scrollView.isScrollEnabled = true
         self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         self.scrollView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         if let singleProduct = self.product {
+            self.navigationItem.title = singleProduct.name
+            
             let title = UILabel()
             title.frame = CGRect()
             title.text = singleProduct.name

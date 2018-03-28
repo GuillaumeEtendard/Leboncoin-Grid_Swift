@@ -18,9 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="1sn-qK-a2G">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Yc0-V4-xcu" id="Olw-Un-bwE"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="120" id="nWO-Me-Kkt" customClass="ItemCell" customModule="Leboncoin" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nWO-Me-Kkt" id="mWv-kn-rhB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
@@ -39,8 +47,21 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="0FS-BY-2Yh"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="searchController" destination="FDx-kx-DNO" id="Rtr-Zd-YQ0"/>
+                        <outlet property="searchDisplayController" destination="FDx-kx-DNO" id="jKJ-wa-Phg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebC-iy-Y3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="FDx-kx-DNO">
+                    <connections>
+                        <outlet property="delegate" destination="Yc0-V4-xcu" id="anX-au-PLl"/>
+                        <outlet property="searchBar" destination="1sn-qK-a2G" id="HuN-5c-GVf"/>
+                        <outlet property="searchContentsController" destination="Yc0-V4-xcu" id="s4Q-xn-Mxl"/>
+                        <outlet property="searchResultsDataSource" destination="Yc0-V4-xcu" id="sMQ-LR-nqu"/>
+                        <outlet property="searchResultsDelegate" destination="Yc0-V4-xcu" id="RhT-z2-jcE"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1280.8" y="-18.440779610194905"/>
         </scene>
